@@ -1,0 +1,39 @@
+# ---- Python build artifacts ----
+__pycache__/
+*.egg-info/
+*.egg
+
+# ---- Virtual environments ----
+.venv/
+
+# ---- Environment & config ----
+.env
+*.env
+*.ini
+*.cfg
+
+# ---- IDE & system files ----
+.vscode/
+.idea/
+.DS_Store
+
+# ---- Test & notebook files ----
+notebooks/
+*.ipynb_checkpoints/
+
+# ---- Data, media & cache ----
+.cache/
+.ruff_cache/
+.mypy_cache/
+pytest_cache/
+
+# ---- Git & version control ----
+.git/
+.gitignore
+.gitattributes
+
+# ---- Docker-specific ----
+Dockerfile
+.dockerignore
+
+# ---- Others (optional) ----

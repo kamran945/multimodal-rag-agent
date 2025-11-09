@@ -1,0 +1,27 @@
+[project]
+name = "mulimodal-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.3.0",
+    "fastmcp[web]>=2.13.0.1",
+    "groq>=0.33.0",
+    "ipykernel>=7.0.1",
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.4.10",
+    "loguru>=0.7.3",
+    "moviepy>=2.2.1",
+    "openai>=2.6.1",
+    "pixeltable>=0.4.18",
+    "pydantic>=2.12.3",
+    "pydantic-settings>=2.11.0",
+    "sentence-transformers>=5.1.2",
+    "torch>=2.9.0",
+    "torchvision>=0.24.0",
+    "transformers>=4.57.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multimodal_rag"]

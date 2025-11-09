@@ -1,0 +1,65 @@
+services:
+  multimodal-mcp:
+    container_name: multimodal-mcp
+    build:
+      context: ./multimodal-mcp
+    ports:
+      - "9090:9090"
+    env_file:
+      - ./multimodal-mcp/.env
+    networks:
+      - multimodal-rag-network
+    environment:
+      - SHARED_MEDIA_DIR=/app/shared_media
+      - SHARED_OUTPUT_VIDEO_DIR=/app/shared_media
+      - HF_HOME=/root/.cache/huggingface
+    volumes:
+      - shared_media:/app/shared_media
+      - ${USERPROFILE}/.cache:/root/.cache
+      - ${USERPROFILE}/.cache/huggingface:/root/.cache/huggingface
+
+
+  multimodal-api:
+    container_name: multimodal-api
+    build:
+      context: ./multimodal-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SHARED_MEDIA_DIR=/app/shared_media
+      - MCP_SERVER=http://multimodal-mcp:9090/mcp
+      - MCP_SERVER_NAME=multimodal-mcp
+      - MCP_TRANSPORT_MECHANISM=streamable_http
+      - DISABLE_NEST_ASYNCIO=True
+    env_file:
+      - ./multimodal-api/.env
+    networks:
+      - multimodal-rag-network
+    depends_on:
+      - multimodal-mcp
+    volumes:
+      - shared_media:/app/shared_media
+      
+  multimodal-agent-ui:
+    container_name: multimodal-agent-ui
+    build:
+      context: ./multimodal-agent-ui
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3000:3000"
+    depends_on:
+      - multimodal-api
+      - multimodal-mcp
+    networks:
+      - multimodal-rag-network
+    volumes:
+      - shared_media:/app/shared_media
+
+networks:
+  multimodal-rag-network:
+    name: multimodal-rag-network
+
+volumes:
+  shared_media:
+    name: shared_media

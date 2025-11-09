@@ -1,0 +1,412 @@
+@import "tailwindcss";
+
+/* ============================================
+   MODERN AGENTIC AI APP - DUAL THEME SYSTEM
+   Light: Soft warm neutrals with subtle accent
+   Dark: Deep slate with electric blue accents
+   ============================================ */
+
+:root {
+  /* Light Theme: Clinical Precision with Violet Accent */
+  --background: 0 0% 100%;               /* pure white - maximum clarity */
+  --foreground: 240 10% 10%;             /* near-black - sharp readability */
+
+  --sidebar-background: 240 8% 97%;      /* cool grey - distinct but subtle */
+  --sidebar-foreground: 240 10% 8%;      /* deep grey-blue */
+
+  --topbar-background: 0 0% 99%;         /* off-white - barely there */
+  --main-background: 0 0% 100%;          /* pure white workspace */
+
+  --border-color: 240 8% 90%;            /* neutral grey borders */
+
+  --primary: 262 83% 58%;                /* rich violet - sophisticated AI feel */
+  --primary-foreground: 0 0% 100%;
+
+  /* Buttons - Minimal and precise */
+  --button-background: 240 6% 96%;       /* neutral grey */
+  --button-foreground: 240 10% 10%;      /* dark text */
+  --button-hover: 240 8% 92%;            /* slightly darker */
+  --button-border: 240 8% 88%;           /* defined edge */
+
+  /* Inputs - Pure and clean */
+  --input-background: 0 0% 100%;         /* white */
+  --input-foreground: 240 10% 10%;       /* dark text */
+  --input-border: 240 8% 88%;            /* soft border */
+  --input-placeholder: 240 6% 55%;       /* medium grey */
+
+  /* Chat messages - Clear visual hierarchy */
+  --chat-user-background: 262 90% 96%;   /* light violet wash */
+  --chat-user-foreground: 262 50% 20%;   /* deep violet text */
+  --chat-ai-background: 240 6% 97%;      /* neutral grey */
+  --chat-ai-foreground: 240 10% 10%;     /* dark text */
+
+  /* Cards - Paper-like elevation */
+  --card-background: 0 0% 100%;          /* white */
+  --card-foreground: 240 10% 10%;
+  --card-border: 240 8% 92%;             /* subtle edge */
+  --card-shadow: 240 8% 15% / 0.06;      /* barely-there shadow */
+
+  /* Toasts */
+  --toast-background: 0 0% 100%;
+  --toast-foreground: 240 10% 10%;
+  --toast-border: 240 8% 88%;
+}
+
+.dark {
+  /* Dark Theme: Deep Space with Cyan Accent */
+  --background: 240 12% 6%;              /* deep space black */
+  --foreground: 0 0% 98%;                /* bright white text */
+
+  --sidebar-background: 240 10% 9%;      /* slightly elevated */
+  --sidebar-foreground: 0 0% 98%;        /* crisp white */
+
+  --topbar-background: 240 10% 8%;       /* subtle distinction */
+  --main-background: 240 12% 6%;         /* deep workspace */
+
+  --border-color: 240 8% 18%;            /* subtle dividers */
+
+  --primary: 180 100% 50%;               /* bright cyan - tech/AI signature */
+  --primary-foreground: 240 12% 6%;
+
+  /* Buttons - Elevated surfaces */
+  --button-background: 240 10% 12%;      /* raised surface */
+  --button-foreground: 0 0% 98%;         /* white text */
+  --button-hover: 240 10% 16%;           /* hover lift */
+  --button-border: 240 8% 20%;           /* defined edge */
+
+  /* Inputs - Recessed feel */
+  --input-background: 240 12% 10%;       /* recessed */
+  --input-foreground: 0 0% 98%;
+  --input-border: 240 8% 18%;
+  --input-placeholder: 240 6% 50%;       /* muted */
+
+  /* Chat messages - High contrast distinction */
+  --chat-user-background: 180 100% 12%;  /* deep cyan */
+  --chat-user-foreground: 180 100% 95%;  /* bright cyan-white */
+  --chat-ai-background: 240 10% 12%;     /* neutral dark */
+  --chat-ai-foreground: 0 0% 96%;        /* soft white */
+
+  /* Cards - Floating surfaces */
+  --card-background: 240 10% 10%;        /* elevated */
+  --card-foreground: 0 0% 98%;
+  --card-border: 240 8% 18%;
+  --card-shadow: 0 0% 0% / 0.4;          /* deep shadow */
+
+  /* Toasts */
+  --toast-background: 240 10% 12%;
+  --toast-foreground: 0 0% 98%;
+  --toast-border: 240 8% 20%;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================
+   LAYOUT COMPONENTS
+   ============================================ */
+
+/* Sidebar */
+.sidebar {
+  background-color: hsl(var(--sidebar-background));
+  color: hsl(var(--sidebar-foreground));
+  border-right: 1px solid hsl(var(--border-color));
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border-color)) transparent;
+}
+
+.sidebar nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border-color));
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar nav::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary));
+}
+
+/* Topbar */
+.topbar {
+  background-color: hsl(var(--topbar-background));
+  color: hsl(var(--foreground));
+  border-bottom: 1px solid hsl(var(--border-color));
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
+}
+
+/* Main Content */
+.main {
+  background-color: hsl(var(--main-background));
+  color: hsl(var(--foreground));
+  border-left: 1px solid hsl(var(--border-color));
+  transition: background-color 0.3s ease;
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Buttons */
+.button {
+  background-color: hsl(var(--button-background));
+  color: hsl(var(--button-foreground));
+  border: 1px solid hsl(var(--button-border));
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: hsl(var(--button-hover));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px hsl(var(--border-color) / 0.15);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Primary Button Variant */
+.button-primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.85));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  font-weight: 500;
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary) / 0.75));
+  box-shadow: 0 6px 20px hsl(var(--primary) / 0.3);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+/* Inputs / Textareas */
+.input {
+  background-color: hsl(var(--input-background));
+  color: hsl(var(--input-foreground));
+  border: 1px solid hsl(var(--input-border));
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input::placeholder {
+  color: hsl(var(--input-placeholder));
+}
+
+.input:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+/* ============================================
+   CHAT COMPONENTS
+   ============================================ */
+
+/* Chat User Message */
+.chat-user {
+  background-color: hsl(var(--chat-user-background));
+  color: hsl(var(--chat-user-foreground));
+  padding: 0.75rem 1rem;
+  border-radius: 1.125rem 1.125rem 0.375rem 1.125rem;
+  max-width: 70%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px hsl(var(--border-color) / 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-user:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px hsl(var(--border-color) / 0.15);
+}
+
+/* Chat AI Message */
+.chat-ai {
+  background-color: hsl(var(--chat-ai-background));
+  color: hsl(var(--chat-ai-foreground));
+  padding: 0.75rem 1rem;
+  border-radius: 1.125rem 1.125rem 1.125rem 0.375rem;
+  max-width: 70%;
+  margin-bottom: 0.5rem;
+  border: 1px solid hsl(var(--border-color));
+  box-shadow: 0 2px 8px hsl(var(--border-color) / 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-ai:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px hsl(var(--border-color) / 0.12);
+}
+
+/* ============================================
+   CARDS & SURFACES
+   ============================================ */
+
+/* Cards / Popovers / Modals */
+.card {
+  background-color: hsl(var(--card-background));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px hsl(var(--card-shadow));
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px hsl(var(--card-shadow));
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   NOTIFICATIONS
+   ============================================ */
+
+/* Toasts */
+.toast {
+  background-color: hsl(var(--toast-background));
+  color: hsl(var(--toast-foreground));
+  border: 1px solid hsl(var(--toast-border));
+  border-radius: 0.625rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 6px 24px hsl(var(--card-shadow));
+  backdrop-filter: blur(8px);
+}
+
+/* ============================================
+   SCROLLBARS
+   ============================================ */
+
+/* Main Content Scrollbar */
+.main-scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border-color)) transparent;
+}
+
+.main-scrollable::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main-scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-scrollable::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border-color));
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.main-scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary));
+}
+
+/* ============================================
+   UTILITY COMPONENTS
+   ============================================ */
+
+/* Fullscreen Overlay */
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0 0% 0% / 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Flex Center Utility */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   ACCENT & HIGHLIGHTS
+   ============================================ */
+
+/* Accent Elements */
+.accent-border {
+  border-left: 3px solid hsl(var(--primary));
+}
+
+.accent-text {
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+/* Glow Effect (for dark mode) */
+.dark .glow {
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+}
+
+/* Status Indicators */
+.status-processing {
+  background-color: hsl(210 100% 60% / 0.15);
+  color: hsl(210 100% 60%);
+  border: 1px solid hsl(210 100% 60% / 0.3);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-success {
+  background-color: hsl(142 71% 45% / 0.15);
+  color: hsl(142 71% 45%);
+  border: 1px solid hsl(142 71% 45% / 0.3);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-error {
+  background-color: hsl(0 84% 60% / 0.15);
+  color: hsl(0 84% 60%);
+  border: 1px solid hsl(0 84% 60% / 0.3);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
