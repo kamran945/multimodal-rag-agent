@@ -9,6 +9,7 @@ Intelligent Video Understanding with AI-Powered Search &amp; Retrieval
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.6-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.120.1-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python->=3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Pixeltable](https://img.shields.io/badge/Pixeltable-FF6F00?style=flat-square&logo=google-photos&logoColor=white)](https://pixeltable.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
