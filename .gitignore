@@ -71,8 +71,8 @@ registry.py
 nvm-setup.zip
 
 # other files
-./shared_media
-./demo_videos
+shared_media/
+demo_videos/
 
 # =========================================
 # Docker
