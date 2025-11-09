@@ -21,10 +21,24 @@ Intelligent Video Understanding with AI-Powered Search &amp; Retrieval
 
 ### Watch the Multimodal RAG Agent in Action
 
-<video controls src="https://github.com/user-attachments/assets/757adf79-0eee-4f46-9f13-257cb7c4a74c" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/f8006085-2cef-4f06-b395-ce97d368400b" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/03ad5168-baf6-4c1e-9e8a-b2a4e1e10f57" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/6faa1f31-c9f6-4a83-9bfa-481d3b0bbf89" style="max-width:600px;"></video>
+<table>
+  <tr>
+    <td>
+      <video controls src="https://github.com/user-attachments/assets/757adf79-0eee-4f46-9f13-257cb7c4a74c" width="300" height="200"></video>
+    </td>
+    <td>
+      <video controls src="https://github.com/user-attachments/assets/f8006085-2cef-4f06-b395-ce97d368400b" width="300" height="200"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <video controls src="https://github.com/user-attachments/assets/03ad5168-baf6-4c1e-9e8a-b2a4e1e10f57" width="300" height="200"></video>
+    </td>
+    <td>
+      <video controls src="https://github.com/user-attachments/assets/6faa1f31-c9f6-4a83-9bfa-481d3b0bbf89" width="300" height="200"></video>
+    </td>
+  </tr>
+</table>
 
 ---
 
