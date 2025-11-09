@@ -23,10 +23,7 @@ Intelligent Video Understanding with AI-Powered Search &amp; Retrieval
 
 <video controls src="https://github.com/user-attachments/assets/757adf79-0eee-4f46-9f13-257cb7c4a74c" style="max-width:600px;"></video>
 <video controls src="https://github.com/user-attachments/assets/f8006085-2cef-4f06-b395-ce97d368400b" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/4b4c3dd3-2355-445e-9dc2-e680445dd8e3" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/0dcb1e7b-d23e-49c1-bf40-67bf8809d097" style="max-width:600px;"></video>
 <video controls src="https://github.com/user-attachments/assets/03ad5168-baf6-4c1e-9e8a-b2a4e1e10f57" style="max-width:600px;"></video>
-<video controls src="https://github.com/user-attachments/assets/67557dd7-a024-44cf-bf37-bd331164af1d" style="max-width:600px;"></video>
 <video controls src="https://github.com/user-attachments/assets/6faa1f31-c9f6-4a83-9bfa-481d3b0bbf89" style="max-width:600px;"></video>
 
 ---
