@@ -43,6 +43,48 @@ Intelligent Video Understanding with AI-Powered Search &amp; Retrieval
 
 ---
 
+## 🚀 Why Pixeltable is a Game-Changer
+
+Here's the thing most people don't realize about **multimodal AI**:  
+managing videos, frames, audio, embeddings, and their relationships is **hard**.  
+Traditional databases were never designed for this.
+
+**Pixeltable** solves it elegantly — it’s like having a **relational database that natively understands videos, images, and embeddings.**
+
+---
+
+### ✨ Key Advantages
+
+🎯 **Unified Schema** – Videos, extracted frames, and audio chunks in one coherent structure  
+⚡ **Computed Columns** – Automatic frame captioning and audio transcription as data flows through  
+🔢 **Native Vector Search** – CLIP image embeddings and text embeddings with built-in similarity search  
+🎬 **Iterators** – Extract frames and audio chunks declaratively, no manual loops
+
+---
+
+### 🧠 Why It Matters
+
+Instead of juggling separate databases, file systems, and vector stores,  
+Pixeltable gives you a **single source of truth** for multimodal data.
+
+It’s not just a database — it’s a **multimodal data engine** that bridges storage, computation, and semantic search.
+
+---
+
+### 🎥 Example Workflow
+
+When you upload a video, Pixeltable automatically:
+
+1. Extracts frames at defined intervals
+2. Generates captions using vision models
+3. Creates embeddings for semantic search
+4. Stores audio chunks with transcriptions
+5. Builds vector indices for lightning-fast retrieval
+
+All **declaratively** — no complex pipeline orchestration needed.
+
+---
+
 ## ⚡ Key Features
 
 ### 🎥 Video Intelligence
