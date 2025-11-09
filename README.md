@@ -7,12 +7,11 @@ Intelligent Video Understanding with AI-Powered Search &amp; Retrieval
 **Intelligent Video Understanding with AI-Powered Search & Retrieval**
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.120.1-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python->=3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-(LICENSE)
 
 > **Search videos using natural language, extract clips with AI, and ask questions about your video content — all powered by advanced multimodal RAG techniques.**
 
@@ -252,7 +251,7 @@ For detailed configuration, see configuration files `config.py` in `multimodal-a
 
 ---
 
-### 🎯 Targeted Search (New!)
+### 🎯 Targeted Search
 
 **Without Selection:**
 
@@ -496,7 +495,7 @@ GENERAL_RESPONSE_MODEL=meta-llama/llama-4-scout-17b-16e-instruct
 
 **Solutions:**
 
-1. ✅ Test backend: `curl http://localhost:8080/`
+1. ✅ Test backend: `http://localhost:8080/`
 2. ✅ Check `.env.local`:
    ```env
    NEXT_PUBLIC_API_URL=http://localhost:8080
