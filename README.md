@@ -638,12 +638,12 @@ Found a bug? Let us know!
 
 This project was inspired by and builds upon concepts from:
 
-- **[Multimodal Agents Course](https://github.com/multi-modal-ai/multimodal-agents-course)** by [Neural Maze](https://www.youtube.com/@neuralmaze)
+- **[Multimodal Agents Course](https://github.com/multi-modal-ai/multimodal-agents-course)** by [Neural Maze](https://theneuralmaze.substack.com/)
   - 📺 [Building an MCP Video Agent | Full Course](https://www.youtube.com/watch?v=_iYB1z1_Xgs&t=5435s)
   - 📄 Licensed under Apache-2.0
   - 💡 Core concepts and architecture patterns adapted from this excellent course
 
-Special thanks to [The Neural Maze and Neural Bits](https://github.com/multi-modal-ai/multimodal-agents-course) for making this project possible! ❤️
+Special thanks to [The Neural Maze](https://theneuralmaze.substack.com/) and [Neural Bits](https://multimodalai.substack.com/) for making this project possible! ❤️
 
 ---
 
